@@ -101,55 +101,6 @@ nvim_lsp.rust_analyzer.setup({
     on_attach = on_attach,
 })
 
--- nvim_lsp.rust_analyzer.setup{
---     on_attach=on_attach,
---     -- settings = {
---     --     ["rust-analyzer"] = {
---     --         diagnostics = { 
---     --             enable = false,
---     --             enableExperimental = false,
---     --             gotoTypeDef = false,
---     --         },
---     --         assist = { 
---     --             importGroup = false,
---     --             importMergeBehavior = "none",
---     --             importPrefix = "plain",
---     --         },
---     --         callInfo = {
---     --             full = false
---     --         },
---     --         cargo = {
---     --             allFeatures = false,
---     --             autoreload = false,
---     --             runBuildScripts = false,
---     --             useRustcWrapperForBuildScripts = false,
---     --             noDefaultFeatures = false,
---     --         },
---     --         hoverActions = {
---     --             debug = false,
---     --             enable = false,
---     --             implementations = false,
---     --             run = false,
---     --             linksInHover = false,
---     --             chainingHints = false,
---     --             parameterHints = false,
---     --             typeHints = false,
---     --         },
---     --         lens = {
---     --             debug = false,
---     --             enble = false,
---     --             implementations = false,
---     --             run = false,
---     --         },
---     --         inlayHints = {
--- 				-- chainingHints = false,
--- 				-- typeHints = false,
--- 			-- },
-
---     --     }
---     -- }
--- }
-
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 	vim.lsp.diagnostic.on_publish_diagnostics, {
 		virtual_text = false, 

@@ -1,0 +1,49 @@
+snippet ctor
+constructor($1) {
+	super($1);$0
+}
+endsnippet
+
+snippet rncomp
+import React, { Component } from 'react';
+import {
+	View
+} from 'react-native'
+
+class $1 extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<View />
+		)
+	)
+}
+
+const styles = StyleSheet.create({
+});
+
+export {$1}
+
+endsnippet
+
+snippet cmt
+// -----------------------------------------------------------------------------
+//     - $1 -
+// -----------------------------------------------------------------------------$0
+endsnippet
+
+
+snippet pp "console log" bwA
+`!p
+prefix = t[1]
+`console.log('`!p snip.rv=prefix`', $1);
+endsnippet
+
+snippet if "if statement" bwA
+if ($1) {
+	$0
+}
+endsnippet

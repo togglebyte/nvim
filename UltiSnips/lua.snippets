@@ -1,0 +1,18 @@
+snippet cmt
+-----------------------------------------------------------------------------
+--    $1
+------------------------------------------------------------------------------$0
+endsnippet
+
+
+snippet pp "console log" bwA
+`!p
+prefix = t[1]
+`print("`!p snip.rv=prefix`", $1);
+endsnippet
+
+snippet func "function declaration" bwA
+function $1
+	$0
+end
+endsnippet

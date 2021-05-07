@@ -1,0 +1,165 @@
+snippet elm-element
+module Main exposing (..)
+
+import Browser
+import Html exposing (..)
+import Http exposing (..)
+
+
+
+-- Main
+
+$0
+main =
+    Browser.element
+        { init = init
+        , subscriptions = subscriptions
+        , update = update
+        , view = view
+        }
+
+
+type Msg
+    = Init
+
+
+type alias Model =
+    Int
+
+
+
+-- Init
+
+
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( 0
+    , Cmd.none
+    )
+
+
+
+-- Subscriptions
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
+
+
+
+-- Update
+
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        Init ->
+            ( model, Cmd.none )
+
+
+
+-- View
+
+
+view : Model -> Html Msg
+view model =
+    div [] []
+endsnippet
+
+snippet elm-app
+module Main exposing (..)
+
+import Browser
+import Browser.Navigation as Nav
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Http exposing (..)
+import Url
+
+
+
+-- Main
+
+
+main : Program () Model Msg
+main =
+    Browser.application
+        { init = init
+        , subscriptions = subscriptions
+        , update = update
+        , view = view
+        , onUrlChange = UrlChanged
+        , onUrlRequest = LinkClicked
+        }
+
+
+type Msg
+    = LinkClicked Browser.UrlRequest
+    | UrlChanged Url.Url
+
+
+type alias Model =
+    { key : Nav.Key
+    , url : Url.Url
+    }
+
+
+
+-- Init
+
+
+init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
+init flags url key =
+    ( Model key url, Cmd.none )
+
+
+
+-- Subscriptions
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
+
+
+
+-- Update
+
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        LinkClicked urlRequest ->
+            case urlRequest of
+                Browser.Internal url ->
+                    ( model, Nav.pushUrl model.key (Url.toString url) )
+
+                Browser.External href ->
+                    ( model, Nav.load href )
+
+        UrlChanged url ->
+            ( { model | url = url }, Cmd.none )
+
+
+
+-- View
+
+
+view : Model -> Browser.Document Msg
+view model =
+    { title = "Title here"
+    , body =
+        [ text ("current url is " ++ Url.toString model.url)
+        , ul []
+            [ viewLink "/foo"
+            , viewLink "/bar"
+            ]
+        ]
+    }
+
+
+viewLink : String -> Html msg
+viewLink path =
+    li [] [ a [ href path ] [ text path ] ]
+endsnippet

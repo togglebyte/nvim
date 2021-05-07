@@ -1,0 +1,146 @@
+snippet cmt
+// -----------------------------------------------------------------------------
+//     - $1-
+// -----------------------------------------------------------------------------$0
+endsnippet
+
+snippet struct "Create a struct"
+struct $1 {
+}
+
+impl $1 {
+    fn new() -> Self {
+	    Self {
+		}
+	}
+}
+endsnippet
+
+snippet testmod 
+#[cfg(test)]
+mod test {
+	use super::*;
+
+	$1
+}
+endsnippet
+
+snippet test
+#[test]
+fn $1() {
+	assert_eq!(expected, actual);
+}
+endsnippet
+
+
+snippet react
+fn react(&mut self, reaction: Reaction<Self::Input>) -> Reaction<Self::Output> {
+	match reaction {
+		Reaction::Event(ev) => Reaction::Event(ev),
+		Reaction::Value(val) => Reaction::Value(val),
+		Reaction::Continue => Reaction::Continue,
+	}
+}
+endsnippet
+
+snippet impit
+impl Iterator for $1 {
+	type Item = $0;
+
+	fn next(&mut self) -> Option<Self::Item> {
+		None
+	}
+}
+endsnippet
+
+snippet initnight "Bootstrap NightmareGL setup"
+use nightmaregl::events::{Event, Key, KeyState, LoopAction};
+use nightmaregl::{Color, Context, Position, Result, Size, Animation, Sprite, Renderer, Viewport, Rotation};
+use nightmaregl::texture::{Wrap, Texture};
+
+fn main() -> Result<()> {
+	let (eventloop, mut context) = Context::builder("Best game ever!")
+		.build()?;
+
+	let window_size = context.window_size();
+	let mut viewport = Viewport::new(Position::zero(), window_size);
+	let mut renderer = Renderer::default(&mut context)?;
+
+	eventloop.run(move |event| {
+		match event {
+			Event::Draw(dt) => {
+				context.clear(Color::grey());
+
+				// renderer.render(
+				// 	&texture,
+				// 	&[sprite.vertex_data()],
+				// 	&viewport,
+				// 	&mut context
+				// );
+
+				context.swap_buffers();
+			}
+			Event::Char('q') => return LoopAction::Quit,
+			_ => {}
+		}
+
+		LoopAction::Continue
+	});
+
+	Ok(())
+}
+endsnippet
+
+snippet default "debug macro"
+impl Default for ${0:${VISUAL}} {
+	fn default() {
+		Self {
+		}
+	}
+}
+endsnippet
+
+
+snippet tokiomain "main function"
+#[tokio::main]
+async fn main() {
+${0:${VISUAL}}
+}
+endsnippet
+
+
+snippet main "main function"
+fn main() {
+${0:${VISUAL}}
+}
+endsnippet
+
+
+snippet new "new function"
+pub fn new() -> Self {
+	Self {
+		${0:${VISUAL}}
+	}
+}
+endsnippet
+
+
+snippet benchbase
+#![feature(test)]
+extern crate test;
+use test::bench::{Bencher, black_box};
+
+#[bench]
+fn $1(b: &mut Bencher) {
+    b.iter(|| {
+    });
+}
+endsnippet
+
+snippet bench
+#[bench]
+fn $1(b: &mut Bencher) {
+    b.iter(|| {
+    });
+}
+endsnippet

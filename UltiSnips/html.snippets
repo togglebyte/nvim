@@ -1,0 +1,77 @@
+snippet djangobase
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+    <head>                     
+        <meta charset="utf-8"> 
+
+        <title>$1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+        <link type="text/css" rel="stylesheet" href="{% static 'dist/$2.css' %}" media="screen,projection"/>
+    </head>
+  
+    <body>
+	{% block body %}
+		{% block content %}
+		{% endblock content %}
+	{% endblock body %}
+        <script src="{% static 'js/$3.js' %}"></script>
+    </body>
+</html>
+$0
+endsnippet
+
+snippet djangotpl
+{% extends 'base.html' %}
+
+{% block ${1:content} %}
+$0
+{% endblock ${1:content} %}
+endsnippet
+
+
+snippet djangoform
+<form action="." method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">$1</button>
+</form>
+endsnippet
+
+snippet trans "translation" i
+{% trans '${0:${VISUAL}}' %}
+endsnippet
+
+snippet blocktrans "block translation"
+{% blocktrans %}
+${0:${VISUAL}}
+{% endblocktrans %}
+endsnippet
+
+snippet cmt "django comment"
+{% comment %}
+${0:${VISUAL}}
+{% endcomment %}
+endsnippet
+
+snippet htmlbase
+<!doctype html>
+
+<html lang="en">
+    <head>                     
+        <meta charset="utf-8"> 
+
+        <title>$1</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+        <link type="text/css" rel="stylesheet" href="" media="screen,projection"/>
+    </head>
+  
+    <body>
+    $0
+        <script src=""></script>
+    </body>
+</html>
+endsnippet

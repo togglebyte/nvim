@@ -1,0 +1,23 @@
+snippet cmt
+# -----------------------------------------------------------------------------
+#     - $1 -
+# -----------------------------------------------------------------------------$0
+endsnippet
+
+snippet main
+if __name__ == '__main__':
+	$0
+endsnippet
+
+snippet init
+def __init__(self, *args, **kwargs):
+	$0
+endsnippet
+
+snippet pp "print" bwA
+print($1)
+endsnippet
+
+snippet ipdb "set breakpoint" bwA
+import ipdb; ipdb.set_trace()
+endsnippet

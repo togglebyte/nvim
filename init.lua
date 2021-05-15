@@ -12,6 +12,7 @@ vim.g.mapleader = '\\'
 -------------------------------------------------------------------------------
 vim.o.fillchars = 'vert:│'
 vim.bo.tabstop = 4
+vim.o.expandtab = true
 vim.bo.expandtab = true
 vim.bo.shiftwidth = 4
 vim.o.whichwrap = 'b,s,<,>,h,l,[,]'
@@ -76,7 +77,7 @@ map('t', '<C-w>l', '<C-\\><C-n><C-w>l', {})
 -----------------------------------------------------------------------------
 --    Search
 ------------------------------------------------------------------------------
-vim.cmd(':so $HOME/.config/nvim/search.vim')
+vim.cmd(':so $HOME/.config/nvim/nolua.vim')
 vim.cmd('command! -nargs=* Find call RipGrepping(<q-args>)')
 
 -----------------------------------------------------------------------------

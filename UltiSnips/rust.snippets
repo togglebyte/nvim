@@ -54,13 +54,17 @@ impl Iterator for $1 {
 endsnippet
 
 snippet initnight "Bootstrap NightmareGL setup"
-use nightmaregl::events::{Event, Key, KeyState, LoopAction};
-use nightmaregl::{Color, Context, Position, Result, Size, Animation, Sprite, Renderer, Viewport, Rotation};
+use nightmaregl::events::{Event, Key, KeyState, LoopAction, EventLoop};
+use nightmaregl::{
+    Color, Context, Position, Result, Size, Animation, 
+    Sprite, Renderer, Viewport, Rotation
+};
 use nightmaregl::texture::{Wrap, Texture};
 
 fn main() -> Result<()> {
-	let (eventloop, mut context) = Context::builder("Best game ever!")
+	let (el, mut context) = Context::builder("Best game ever!")
 		.build()?;
+	let eventloop = EventLoop::new(el);
 
 	let window_size = context.window_size();
 	let mut viewport = Viewport::new(Position::zero(), window_size);
@@ -72,10 +76,10 @@ fn main() -> Result<()> {
 				context.clear(Color::grey());
 
 				// renderer.render(
-				// 	&texture,
-				// 	&[sprite.vertex_data()],
-				// 	&viewport,
-				// 	&mut context
+				//     &texture,
+				//     &[sprite.vertex_data()],
+				//     &viewport,
+				//     &mut context
 				// );
 
 				context.swap_buffers();

@@ -57,7 +57,7 @@ snippet initnight "Bootstrap NightmareGL setup"
 use nightmaregl::events::{Event, Key, KeyState, LoopAction, EventLoop};
 use nightmaregl::{
     Color, Context, Position, Result, Size, Animation, 
-    Sprite, Renderer, Viewport, Rotation
+    Sprite, Renderer, Viewport, Rotation, Transform
 };
 use nightmaregl::texture::{Wrap, Texture};
 
@@ -72,10 +72,10 @@ fn main() -> Result<()> {
 
 	eventloop.run(move |event| {
 		match event {
-			Event::Draw(dt) => {
+			Event::Draw(_dt) => {
 				context.clear(Color::grey());
 
-				// renderer.render(
+				// let _ = renderer.render(
 				//     &texture,
 				//     &[sprite.vertex_data()],
 				//     &viewport,

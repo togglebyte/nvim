@@ -16,7 +16,7 @@ function RipGrepping(search_term)
 endfunction
 command! -nargs=* Find call RipGrepping(<q-args>)
 
-nmap <C-f> :Find 
+" nmap <C-f> :Find 
 
 " -----------------------------------------------------------------------------
 "     - Explore -
@@ -37,3 +37,6 @@ function! InsertDateStamp()
 endfunction
 
 :command! DS call InsertDateStamp()
+
+
+au TermOpen * exec "normal G"

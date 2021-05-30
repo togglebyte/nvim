@@ -67,6 +67,7 @@ map('n', '<C-l>', ':vertical resize +4<CR>', {})
 map('n', '<C-k>', ':resize +4<CR>', {})
 map('n', '<C-j>', ':resize -4<CR>', {})
 map('n', '<Leader>}', 'ysiw}', {})
+map('n', '<C-f>', ':Rg ', {})
 
 -- Terminal flapping
 map('t', '<C-w>k', '<C-\\><C-n><C-w>k', {}) 

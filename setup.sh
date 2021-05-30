@@ -11,6 +11,7 @@ PACKAGES=(
     "togglebyte/togglerust"
     "junegunn/fzf.vim"
     "rust-lang/rust.vim"
+    "sunaku/vim-dasht"
 )
 
 if [[ $1 == "--init" ]]

@@ -23,6 +23,7 @@ nmap <leader>[ :cprev<CR>
 "     - Abbreviations -
 " -----------------------------------------------------------------------------
 ia pp eprintln!("{:?}",);<Left><Left>
+ia pl! println!("{:?}",);<Left><Left>
 ia cmt cmt<Leader>t<Left>
 ia dd #[derive(Debug)]
 

@@ -2,7 +2,7 @@
 
 # List of all packages to install.
 # Currently this requires that each package
-# lives on github.com.
+# lives on github.com
 PACKAGES=(
     "neovim/nvim-lspconfig"
     "sirver/UltiSnips"

@@ -54,10 +54,10 @@ impl Iterator for $1 {
 endsnippet
 
 snippet initnight "Bootstrap NightmareGL setup"
-use nightmaregl::events::{Event, Key, KeyState, LoopAction, EventLoop};
+use nightmaregl::events::{Event, Key, ButtonState, LoopAction, EventLoop};
 use nightmaregl::{
     Color, Context, Position, Result, Size, Animation, 
-    Sprite, Renderer, Viewport, Rotation, Transform
+    Sprite, Renderer, Viewport, Rotation, Transform, VertexData
 };
 use nightmaregl::texture::{Wrap, Texture};
 
@@ -77,7 +77,7 @@ fn main() -> Result<()> {
 
 				// let _ = renderer.render(
 				//     &texture,
-				//     &[sprite.vertex_data()],
+				//     &[vertex_data],
 				//     &viewport,
 				//     &mut context
 				// );

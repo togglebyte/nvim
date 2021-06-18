@@ -18,6 +18,9 @@ nmap gv <Plug>(rust-def-vertical)
 nmap <F5> :call RunDebugger()<CR>
 nmap <leader>] :cnext<CR>
 nmap <leader>[ :cprev<CR>
+nmap <leader>d :Break<CR>
+nmap <leader>r :DebugMain<CR>
+
 
 " -----------------------------------------------------------------------------
 "     - Abbreviations -

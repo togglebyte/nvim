@@ -11,7 +11,6 @@ PACKAGES=(
     "togglebyte/togglerust"
     "junegunn/fzf.vim"
     "rust-lang/rust.vim"
-    "sunaku/vim-dasht"
     "vimwiki/vimwiki"
 )
 

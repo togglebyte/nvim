@@ -68,11 +68,13 @@ nmap <C-j> :resize -4<CR>
 nmap <Leader>} ysiw}
 nmap <C-f> :Rg 
 
-" " Terminal flapping
-" nmap <C-w>k <C-\\><C-n><C-w>k 
-" nmap <C-w>j <C-\\><C-n><C-w>j 
-" nmap <C-w>h <C-\\><C-n><C-w>h 
-" nmap <C-w>l <C-\\><C-n><C-w>l 
+" Terminal flapping
+tmap <C-w>k <C-\><C-n><C-w>k 
+tmap <C-w>j <C-\><C-n><C-w>j 
+tmap <C-w>h <C-\><C-n><C-w>h 
+tmap <C-w>l <C-\><C-n><C-w>l 
+
+au TermOpen * exec "normal G"
 
 " -----------------------------------------------------------------------------
 "     - Grep -

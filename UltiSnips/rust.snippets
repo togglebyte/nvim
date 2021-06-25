@@ -64,11 +64,11 @@ use nightmaregl::texture::{Wrap, Texture};
 fn main() -> Result<()> {
 	let (el, mut context) = Context::builder("Best game ever!")
 		.build()?;
-	let eventloop = EventLoop::new(el);
+	let eventloop = EventLoop::<()>::new(el);
 
 	let window_size = context.window_size();
 	let mut viewport = Viewport::new(Position::zero(), window_size);
-	let mut renderer = Renderer::default(&mut context)?;
+	let mut renderer = Renderer::<VertexData>::default(&mut context)?;
 
 	eventloop.run(move |event| {
 		match event {

@@ -12,6 +12,7 @@ PACKAGES=(
     "junegunn/fzf.vim"
     "rust-lang/rust.vim"
     "vimwiki/vimwiki"
+    "tpope/vim-fugitive"
 )
 
 if [[ $1 == "--init" ]]

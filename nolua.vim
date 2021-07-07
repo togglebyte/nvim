@@ -50,6 +50,8 @@ set nomodeline
 
 let g:netrw_banner=0
 
+syntax on
+
 " -----------------------------------------------------------------------------
 "     - I love my blocky cursor! -
 " -----------------------------------------------------------------------------
@@ -74,7 +76,9 @@ tmap <C-w>j <C-\><C-n><C-w>j
 tmap <C-w>h <C-\><C-n><C-w>h 
 tmap <C-w>l <C-\><C-n><C-w>l 
 
-au TermOpen * exec "normal G"
+if has("nvim")
+    au TermOpen * exec "normal G"
+endif
 
 " -----------------------------------------------------------------------------
 "     - Grep -

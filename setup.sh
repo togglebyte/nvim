@@ -13,6 +13,7 @@ PACKAGES=(
     "rust-lang/rust.vim"
     "vimwiki/vimwiki"
     "tpope/vim-fugitive"
+    "prabirshrestha/vim-lsp" # For regular vim, not neovim
 )
 
 if [[ $1 == "--init" ]]

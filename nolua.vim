@@ -17,7 +17,10 @@ let g:mapleader="\\"
 " -----------------------------------------------------------------------------
 "     - Default settings -
 " -----------------------------------------------------------------------------
-" set nopreviewwindow
+filetype plugin indent on
+syntax on
+
+set nopreviewwindow
 set fillchars+=vert:│
 set tabstop=4
 set expandtab
@@ -50,7 +53,39 @@ set nomodeline
 
 let g:netrw_banner=0
 
+set fillchars+=vert:│
 syntax on
+filetype plugin indent on
+set nopreviewwindow
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set whichwrap+=<,>,h,l,[,]
+set incsearch
+set ignorecase
+set smartcase
+set smartindent
+set wildmenu
+set wildmode=full
+set foldmethod=indent
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set noruler
+set laststatus=0
+set splitright
+set splitbelow
+set backspace=indent,eol,start
+set nowrap
+set nohlsearch
+set ttimeoutlen=10
+set mouse=
+set noswapfile
+set colorcolumn=110
+set nosmd
+set hidden
+noremap <F1> :echo "--- lol, accidental F1 ---"<CR>
+
 
 " -----------------------------------------------------------------------------
 "     - I love my blocky cursor! -

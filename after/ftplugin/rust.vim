@@ -35,7 +35,24 @@ ia dd #[derive(Debug)]
 "     Neovim lsp setup is done in init.lua
 " -----------------------------------------------------------------------------
 if executable('rust-analyzer')
-    " pip install python-language-server
+    " Disable most things
+    let g:lsp_auto_enable = 0
+    let g:lsp_preview_keep_focus = 0
+    let g:lsp_preview_float = 0
+    let g:lsp_preview_autoclose = 0
+    let g:lsp_insert_text_enabled = 0
+    let g:lsp_text_edit_enabled = 0
+    let g:lsp_completion_documentation_enabled = 0
+    let g:lsp_diagnostics_enabled = 0
+    let g:lsp_diagnostics_highlights_enabled = 0
+    let g:lsp_diagnostics_signs_enabled = 0
+    let g:lsp_diagnostics_signs_insert_mode_enabled = 0
+    let g:lsp_diagnostics_virtual_text_enabled = 0
+    let g:lsp_document_highlight_enabled = 0
+    let g:lsp_signature_help_enabled = 0
+    let g:lsp_show_message_request_enabled = 0
+    let g:lsp_preview_doubletap = 0
+
     au User lsp_setup call lsp#register_server({
         \ 'name': 'rust-analyzer',
         \ 'cmd': {server_info->['rust-analyzer']},
@@ -46,27 +63,7 @@ endif
 function! s:on_lsp_buffer_enabled() abort
     setlocal signcolumn=no
 
-    " Disable most things
-    let g:lsp_auto_enable = 0
-    let g:lsp_preview_keep_focus = 0
-    let g:lsp_preview_float = 0
-    let g:lsp_preview_autoclose = 1
-    let g:lsp_insert_text_enabled = 0
-    let g:lsp_text_edit_enabled = 0
-    let g:lsp_completion_documentation_enabled = 0
-    let g:lsp_diagnostics_enabled = 0
-    let g:lsp_diagnostics_highlights_enabled = 0
-    let g:lsp_diagnostics_signs_enabled = 0
-    let g:lsp_diagnostics_signs_insert_mode_enabled = 0
-    let g:lsp_diagnostics_virtual_text_enabled = 0
-    let g:lsp_diagnostics_virtual_text_enabled = 0
-    let g:lsp_document_highlight_enabled = 0
-
     nmap <buffer> gd <plug>(lsp-definition)
-    let g:lsp_format_sync_timeout = 1000
-    autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
-    
-    " refer to doc to add more commands
 endfunction
 
 augroup lsp_install

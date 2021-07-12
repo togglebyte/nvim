@@ -52,6 +52,7 @@ if executable('rust-analyzer')
     let g:lsp_signature_help_enabled = 0
     let g:lsp_show_message_request_enabled = 0
     let g:lsp_preview_doubletap = 0
+    let g:lsp_document_code_action_signs_enabled = 0
 
     au User lsp_setup call lsp#register_server({
         \ 'name': 'rust-analyzer',
@@ -61,8 +62,6 @@ if executable('rust-analyzer')
 endif
 
 function! s:on_lsp_buffer_enabled() abort
-    setlocal signcolumn=no
-
     nmap <buffer> gd <plug>(lsp-definition)
 endfunction
 

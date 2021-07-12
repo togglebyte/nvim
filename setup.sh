@@ -4,7 +4,6 @@
 # Currently this requires that each package
 # lives on github.com
 PACKAGES=(
-    "neovim/nvim-lspconfig"
     "sirver/UltiSnips"
     "tpope/vim-commentary"
     "tpope/vim-surround"
@@ -13,7 +12,8 @@ PACKAGES=(
     "rust-lang/rust.vim"
     "vimwiki/vimwiki"
     "tpope/vim-fugitive"
-    "prabirshrestha/vim-lsp" # For regular vim, not neovim
+    "prabirshrestha/vim-lsp"
+    "preservim/tagbar"
 )
 
 if [[ $1 == "--init" ]]

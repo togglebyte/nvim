@@ -21,6 +21,12 @@ nmap <leader>[ :cprev<CR>
 nmap <leader>d :Break<CR>
 nmap <leader>r :DebugMain<CR>
 
+" -----------------------------------------------------------------------------
+"     - Tagbar  -
+" -----------------------------------------------------------------------------
+let g:tagbar_width = 22
+let g:tagbar_compact = 1
+nmap <C-n> :TagbarToggle<CR>
 
 " -----------------------------------------------------------------------------
 "     - Abbreviations -

@@ -13,7 +13,7 @@ PACKAGES=(
     "vimwiki/vimwiki"
     "tpope/vim-fugitive"
     "preservim/tagbar"
-    "neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig"
 )
 
 if [[ $1 == "--init" ]]

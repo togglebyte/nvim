@@ -12,8 +12,8 @@ PACKAGES=(
     "rust-lang/rust.vim"
     "vimwiki/vimwiki"
     "tpope/vim-fugitive"
-    "prabirshrestha/vim-lsp"
     "preservim/tagbar"
+    "neovim/nvim-lspconfig",
 )
 
 if [[ $1 == "--init" ]]

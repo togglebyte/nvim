@@ -14,6 +14,7 @@ PACKAGES=(
     "tpope/vim-fugitive"
     "preservim/tagbar"
     "neovim/nvim-lspconfig"
+    "zah/nim.vim"
 )
 
 if [[ $1 == "--init" ]]

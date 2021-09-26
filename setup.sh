@@ -12,7 +12,6 @@ PACKAGES=(
     "rust-lang/rust.vim"
     "vimwiki/vimwiki"
     "tpope/vim-fugitive"
-    "preservim/tagbar"
     "neovim/nvim-lspconfig"
     "zah/nim.vim"
 )

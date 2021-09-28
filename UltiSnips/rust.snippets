@@ -148,3 +148,22 @@ fn $1(b: &mut Bencher) {
     });
 }
 endsnippet
+
+snippet address "address boilerplate"
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+pub enum Address {
+	$0
+}
+
+impl ToAddress for Address {
+	fn from_bytes(bytes: &[u8]) -> Option<Address> {
+		match bytes {
+			_ => None
+		}
+	}
+
+	fn to_string(&self) -> String {
+		format!("{:?}", self)
+	}
+}
+endsnippet

@@ -20,6 +20,7 @@ nmap <leader>] :cnext<CR>
 nmap <leader>[ :cprev<CR>
 nmap <leader>d :Break<CR>
 nmap <leader>r :DebugMain<CR>
+nmap <leader>; :Step<CR>
 nmap ; :Over<CR>
 
 " -----------------------------------------------------------------------------

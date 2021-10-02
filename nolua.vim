@@ -91,7 +91,7 @@ set grepprg=rg\ --vimgrep
 "     - Debugging -
 " -----------------------------------------------------------------------------
 packadd termdebug
-let g:termdebug_wide = 80
+let g:termdebug_wide = 1
 
 " -----------------------------------------------------------------------------
 "     - Explore -

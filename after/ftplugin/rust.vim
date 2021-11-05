@@ -9,17 +9,14 @@ set textwidth=99
 " -----------------------------------------------------------------------------
 nmap <C-b> :Compile<CR>
 nmap <Leader>x :Cargo run<CR>
-nmap <Leader>b :Cargo test -- --nocapture<CR>
 nmap <S-k> :call RustDocs()<CR>
 nmap <Leader>f :RustFmt<CR>
-nmap <Leader>B :!clear;env RUST_BACKTRACE=1 cargo test -- --nocapture<CR>
 nmap gd <Plug>(rust-def)
 nmap gv <Plug>(rust-def-vertical)
-nmap <F5> :call RunDebugger()<CR>
 nmap <leader>] :cnext<CR>
 nmap <leader>[ :cprev<CR>
-nmap <leader>d :Break<CR>
-nmap <leader>r :DebugMain<CR>
+nmap <leader>d :DebugMain<CR>
+nmap <leader>b :Break<CR>
 nmap <leader>; :Step<CR>
 nmap ; :Over<CR>
 

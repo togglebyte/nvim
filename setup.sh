@@ -8,6 +8,7 @@ PACKAGES=(
     "tpope/vim-commentary"
     "tpope/vim-surround"
     "togglebyte/togglerust"
+    "junegunn/fzf"
     "junegunn/fzf.vim"
     "rust-lang/rust.vim"
     "vimwiki/vimwiki"

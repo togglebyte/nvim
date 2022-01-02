@@ -16,9 +16,14 @@ nmap gv <Plug>(rust-def-vertical)
 nmap <leader>] :cnext<CR>
 nmap <leader>[ :cprev<CR>
 nmap <leader>d :DebugMain<CR>
-nmap <leader>b :Break<CR>
+nmap <leader>b :DebugAndBreak<CR>
 nmap <leader>; :Step<CR>
 nmap ; :Over<CR>
+" nmap <leader>d :lua require'dap'.continue()<CR>
+" nmap <leader>b :lua require'dap'.toggle_breakpoint()<CR>
+" nmap <leader>; :lua require'dap'.step_over()<CR>
+" nmap <leader>ui :lua require'dapui'.toggle()<CR>
+" nmap ; :lua require'dap'.step_over()<CR>
 
 " -----------------------------------------------------------------------------
 "     - Abbreviations -

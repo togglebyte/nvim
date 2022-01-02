@@ -5,6 +5,19 @@ noremap <Up> <Nop>
 noremap <Right> <Nop>
 
 " -----------------------------------------------------------------------------
+"     Temporus was all like "yeah fix fix" 
+"     and I was like "sure, you got this"
+"     and Temporus just like, got it!
+" -----------------------------------------------------------------------------
+" if (has("nvim"))
+" 	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" endif
+
+" if (has("termguicolors"))
+" 	set termguicolors
+" endif
+
+" -----------------------------------------------------------------------------
 "     - Colours -
 " -----------------------------------------------------------------------------
 colorscheme togglebit
@@ -93,6 +106,9 @@ set grepprg=rg\ --vimgrep
 " -----------------------------------------------------------------------------
 packadd termdebug
 let g:termdebug_wide = 1
+let g:TermDebugging = 0
+au User TermdebugStartPre let g:TermDebugging = 1
+au User TermdebugStopPost let g:TermDebugging = 0
 
 " -----------------------------------------------------------------------------
 "     - Explore -

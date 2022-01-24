@@ -83,7 +83,7 @@ nmap <C-k> :resize +4<CR>
 nmap <C-j> :resize -4<CR>
 nmap <Leader>} ysiw}
 nmap <C-f> :Rg 
-nmap Y yy
+" nmap Y yy
 
 " Terminal flapping
 tmap <C-w>k <C-\><C-n><C-w>k 

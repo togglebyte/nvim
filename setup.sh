@@ -19,6 +19,9 @@ PACKAGES=(
     "ziglang/zig.vim.git"
 )
 
+# -----------------------------------------------------------------------------
+# Warning: this will overwrite any existing directories <-- READ THIS
+# -----------------------------------------------------------------------------
 if [[ $1 == "--init" ]]
 then
     # Create the pack/dev/start directory 

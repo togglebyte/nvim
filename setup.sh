@@ -14,8 +14,6 @@ PACKAGES=(
     "tpope/vim-fugitive"
     "neovim/nvim-lspconfig"
     "zah/nim.vim"
-    "mfussenegger/nvim-dap"
-    "rcarriga/nvim-dap-ui"
     "ziglang/zig.vim.git"
 )
 

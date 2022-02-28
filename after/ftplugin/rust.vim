@@ -3,13 +3,12 @@
 " -----------------------------------------------------------------------------
 set textwidth=99
 
-
 " -----------------------------------------------------------------------------
 "     - Key mappings -
 " -----------------------------------------------------------------------------
 nmap <C-b> :Compile<CR>
 nmap <Leader>x :Cargo run<CR>
-nmap <S-k> :call RustDocs()<CR>
+nmap <S-k> :lua vim.lsp.buf.hover()<CR>
 nmap <Leader>f :RustFmt<CR>
 nmap gd <Plug>(rust-def)
 nmap gv <Plug>(rust-def-vertical)

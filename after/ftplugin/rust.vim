@@ -17,6 +17,7 @@ nmap <leader>[ :cprev<CR>
 nmap <leader>d :DebugMain<CR>
 nmap <leader>b :DebugAndBreak<CR>
 nmap <leader>; :Step<CR>
+nmap <leader>rt :RustTest<CR>
 nmap ; :Over<CR>
 " nmap <leader>d :lua require'dap'.continue()<CR>
 " nmap <leader>b :lua require'dap'.toggle_breakpoint()<CR>

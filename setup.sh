@@ -4,17 +4,17 @@
 # Currently this requires that each package
 # lives on github.com
 PACKAGES=(
+    "togglebyte/togglerust"
+    "togglebyte/tiny.vim"
     "sirver/UltiSnips"
     "tpope/vim-commentary"
     "tpope/vim-surround"
-    "togglebyte/togglerust"
     "junegunn/fzf.vim"
     "rust-lang/rust.vim"
     "vimwiki/vimwiki"
     "tpope/vim-fugitive"
     "neovim/nvim-lspconfig"
-    "zah/nim.vim"
-    "ziglang/zig.vim.git"
+    "preservim/tagbar",
 )
 
 # -----------------------------------------------------------------------------

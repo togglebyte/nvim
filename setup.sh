@@ -14,7 +14,7 @@ PACKAGES=(
     "vimwiki/vimwiki"
     "tpope/vim-fugitive"
     "neovim/nvim-lspconfig"
-    "preservim/tagbar",
+    "preservim/tagbar"
 )
 
 # -----------------------------------------------------------------------------

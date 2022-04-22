@@ -73,3 +73,8 @@ augroup lsp_install
     " call s:on_lsp_buffer_enabled only for languages that has the server registered.
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+" -----------------------------------------------------------------------------
+"     - Find references to ident -
+" -----------------------------------------------------------------------------
+command! References execute "lua vim.lsp.buf.references()"

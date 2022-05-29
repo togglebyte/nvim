@@ -32,18 +32,7 @@ fn $1() {
 }
 endsnippet
 
-
-snippet react
-fn react(&mut self, reaction: Reaction<Self::Input>) -> Reaction<Self::Output> {
-	match reaction {
-		Reaction::Event(ev) => Reaction::Event(ev),
-		Reaction::Value(val) => Reaction::Value(val),
-		Reaction::Continue => Reaction::Continue,
-	}
-}
-endsnippet
-
-snippet impit
+snippet impit "implement iterator for..."
 impl Iterator for $1 {
 	type Item = $0;
 
@@ -53,104 +42,12 @@ impl Iterator for $1 {
 }
 endsnippet
 
-snippet initnight "Bootstrap NightmareGL setup"
-use nightmare::events::{Event, EventLoop, Key, LoopAction};
-use nightmare::texture::Texture;
-use nightmare::render2d::{Model, SimpleRenderer};
-use nightmare::{
-    Color, Context, Position, Result, create_model_matrix,
-    Rotation, Size, Sprite, Transform, Viewport, VertexData,
-    Scale, Vector, Rect
-};
-
-fn main() -> Result<()> {
-    // -----------------------------------------------------------------------------
-    //     - Context -
-    // -----------------------------------------------------------------------------
-    let (el, mut context) = Context::builder("Best game ever!")
-        // .resizable(false)
-        // .vsync(false)
-        // .with_size(Size::new(800, 600))
-        .build()?;
-
-    let eventloop = EventLoop::<()>::new(el);
-
-    // -----------------------------------------------------------------------------
-    //     - Renderer and Viewport -
-    // -----------------------------------------------------------------------------
-    let window_size = context.window_size();
-    let mut viewport = Viewport::new(Position::zeros(), window_size);
-    let mut renderer = SimpleRenderer::<Model>::new(&mut context, viewport.view_projection())?;
-
-    // let texture = Texture::from_disk("examples/buny.png")?;
-    // let mut sprite = Sprite::new(&texture);
-
-    // let mut transform = Transform::from_parts(
-    //     viewport.centre().into(),
-    //     Rotation::new(0.0).into(),
-    //     1.0,
-    // );
-
-    // -----------------------------------------------------------------------------
-    //     - Event loop -
-    // -----------------------------------------------------------------------------
-    let now = std::time::Instant::now();
-    eventloop.run(move |event| {
-        match event {
-            Event::Draw(_dt) => {
-                context.clear(Color::grey());
-
-                // Sprite position
-                // let mut new_pos = viewport.centre();
-                // new_pos += Position::new(t.sin(), t.cos()) * 200.0;
-                // transform.isometry.translation = new_pos.into();
-
-                // Sprite rotation
-                // let rot = Rotation::new(t / 1.0);
-                // transform.isometry.rotation = rot.into();
-
-                // Create the model matrix
-                // let model_matrix = create_model_matrix(&sprite, &transform);
-
-                // The vertex data (aka Model)
-                // let model = Model::new(model_matrix, sprite.texture_rect);
-                // renderer.load_data(&[model], &mut context);
-
-                // Render the buny
-                // renderer.render_instanced(&mut context, 1);
-
-                context.swap_buffers();
-            }
-            Event::Resize(size) => viewport.resize(size),
-            Event::Key {
-                key: Key::Escape, ..
-            } => return LoopAction::Quit,
-            Event::Char('q') => return LoopAction::Quit,
-            _ => {}
-        }
-
-        LoopAction::Continue
-    });
-
-    Ok(())
-}
-}
-endsnippet
-
-snippet default "debug macro"
+snippet default "default macro"
 impl Default for ${0:${VISUAL}} {
-	fn default() {
+	fn default() -> Self {
 		Self {
 		}
 	}
-}
-endsnippet
-
-
-snippet tokiomain "main function"
-#[tokio::main]
-async fn main() {
-${0:${VISUAL}}
 }
 endsnippet
 

@@ -145,3 +145,4 @@ set completeopt = ""
 "     - Glsl -
 " -----------------------------------------------------------------------------
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl
+

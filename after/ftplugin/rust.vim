@@ -78,3 +78,4 @@ augroup END
 "     - Find references to ident -
 " -----------------------------------------------------------------------------
 command! References execute "lua vim.lsp.buf.references()"
+command! Rename execute "lua vim.lsp.buf.rename()"

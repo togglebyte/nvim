@@ -42,6 +42,13 @@ impl Iterator for $1 {
 }
 endsnippet
 
+snippet impfrom "implement From for..."
+impl From<$1> for $0 {
+	fn from(e: $1) -> Self {
+	}
+}
+endsnippet
+
 snippet default "default macro"
 impl Default for ${0:${VISUAL}} {
 	fn default() -> Self {

@@ -79,3 +79,4 @@ augroup END
 " -----------------------------------------------------------------------------
 command! References execute "lua vim.lsp.buf.references()"
 command! Rename execute "lua vim.lsp.buf.rename()"
+command! Fixit execute "lua vim.lsp.buf.code_action()"

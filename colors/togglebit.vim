@@ -33,3 +33,6 @@ highlight TabLineSel   ctermbg=240 ctermfg=7  term=NONE cterm=bold
 
 " Debugger
 highlight debugPC      ctermbg=24
+
+" FZF
+highlight Pmenu        ctermbg=0

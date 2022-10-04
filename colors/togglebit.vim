@@ -31,6 +31,9 @@ highlight TabLineFill  ctermbg=234 ctermfg=7 term=NONE cterm=NONE
 highlight TabLine      ctermbg=236 ctermfg=230   term=NONE cterm=NONE
 highlight TabLineSel   ctermbg=240 ctermfg=7  term=NONE cterm=bold
 
+" VSplit
+highlight WinSeparator ctermbg=0
+
 " Debugger
 highlight debugPC      ctermbg=24
 

@@ -38,7 +38,7 @@ highlight WinSeparator ctermbg=0
 highlight debugPC      ctermbg=24
 
 " FZF
-highlight Pmenu        ctermbg=0 ctermfg=252
+highlight Pmenu        ctermbg=0 ctermfg=233
 highlight fzf1         ctermfg=161 ctermbg=0
 highlight fzf2         ctermfg=151 ctermbg=0
 highlight fzf3         ctermfg=252 ctermbg=0

@@ -10,7 +10,7 @@ set nospell
 nmap <C-b> :Compile<CR>
 nmap <Leader>x :Cargo run<CR>
 nmap <S-k> :lua vim.lsp.buf.hover()<CR>
-nmap <Leader>f :RustFmt<CR>
+nmap <Leader>f :call MyRustFmt()<CR>
 nmap gd <Plug>(rust-def)
 nmap gv <Plug>(rust-def-vertical)
 nmap <leader>] :cnext<CR>
@@ -21,11 +21,6 @@ nmap <leader>; :Step<CR>
 nmap <leader>rt :RustTest<CR>
 nmap <leader>tt :DebugTest<CR>
 nmap ; :Over<CR>
-" nmap <leader>d :lua require'dap'.continue()<CR>
-" nmap <leader>b :lua require'dap'.toggle_breakpoint()<CR>
-" nmap <leader>; :lua require'dap'.step_over()<CR>
-" nmap <leader>ui :lua require'dapui'.toggle()<CR>
-" nmap ; :lua require'dap'.step_over()<CR>
 
 " -----------------------------------------------------------------------------
 "     - Abbreviations -
@@ -80,3 +75,8 @@ augroup END
 command! References execute "lua vim.lsp.buf.references()"
 command! Rename execute "lua vim.lsp.buf.rename()"
 command! Fixit execute "lua vim.lsp.buf.code_action()"
+
+function! MyRustFmt()
+    let l:cmd = ":!cargo +nightly fmt -- " . @%
+    silent! execute cmd
+endfunction

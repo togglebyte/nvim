@@ -10,7 +10,7 @@ set nospell
 nmap <C-b> :Compile<CR>
 nmap <Leader>x :Cargo run<CR>
 nmap <S-k> :lua vim.lsp.buf.hover()<CR>
-nmap <Leader>f :call MyRustFmt()<CR>
+nmap <silent> <Leader>f :call MyRustFmt()<CR>
 nmap gd <Plug>(rust-def)
 nmap gv <Plug>(rust-def-vertical)
 nmap <leader>] :cnext<CR>

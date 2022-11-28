@@ -38,13 +38,15 @@ then
     cd pack/dev/start
     for package in "${PACKAGES[@]}"
     do
-        git clone "https://github.com/$package"
+        git clone "https://github.com/$package" &
     done
 else
     # Git pull every package in pack/dev/start
     for package in `ls pack/dev/start`
     do
         path="pack/dev/start/$package"
-        (cd $path && git pull)
+        (cd $path && git pull) &
     done
 fi
+wait
+echo "done..."

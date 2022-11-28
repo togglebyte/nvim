@@ -10,8 +10,7 @@ set nospell
 nmap <C-b> :Compile<CR>
 nmap <Leader>x :Cargo run<CR>
 nmap <S-k> :lua vim.lsp.buf.hover()<CR>
-nmap <silent> <Leader>f :call MyRustFmt()<CR>
-nmap gd <Plug>(rust-def)
+nmap <silent> <Leader>f :RustFmt<CR>
 nmap gv <Plug>(rust-def-vertical)
 nmap <leader>] :cnext<CR>
 nmap <leader>[ :cprev<CR>
@@ -59,15 +58,7 @@ if executable('rust-analyzer')
         \ })
 endif
 
-function! s:on_lsp_buffer_enabled() abort
-    nmap <buffer> gd <plug>(lsp-definition)
-endfunction
-
-augroup lsp_install
-    au!
-    " call s:on_lsp_buffer_enabled only for languages that has the server registered.
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
+let g:rustfmt_command = "rustfmt +nightly"
 
 " -----------------------------------------------------------------------------
 "     - Find references to ident -
@@ -75,8 +66,3 @@ augroup END
 command! References execute "lua vim.lsp.buf.references()"
 command! Rename execute "lua vim.lsp.buf.rename()"
 command! Fixit execute "lua vim.lsp.buf.code_action()"
-
-function! MyRustFmt()
-    let l:cmd = ":!cargo +nightly fmt -- " . @%
-    silent! execute cmd
-endfunction

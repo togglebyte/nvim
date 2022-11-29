@@ -15,7 +15,7 @@ highlight SpellCap     ctermbg=4   ctermfg=15
 highlight VertSplit    ctermbg=6   ctermfg=0
 highlight MatchParen   ctermbg=241
 highlight SpellLocal   ctermbg=55
-highlight Search       ctermfg=15 ctermbg=52
+highlight Search       ctermfg=15 ctermbg=16
 
 " highlight clear MatchParen
 highlight DiffAdd      ctermbg=4   ctermfg=15

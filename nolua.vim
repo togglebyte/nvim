@@ -148,6 +148,10 @@ set completeopt = ""
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl
 
 " -----------------------------------------------------------------------------
-"     - Quickfix fix -
+"     - Quickfix list -
 " -----------------------------------------------------------------------------
 au FileType qf wincmd J
+nmap <leader>co :copen<CR>
+nmap <leader>cc :cclose<CR>
+nmap <leader>] :cnext<CR>
+nmap <leader>[ :cprev<CR>

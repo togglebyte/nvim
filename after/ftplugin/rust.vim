@@ -12,8 +12,6 @@ nmap <Leader>x :Cargo run<CR>
 nmap <S-k> :lua vim.lsp.buf.hover()<CR>
 nmap <silent> <Leader>f :RustFmt<CR>
 nmap gv <Plug>(rust-def-vertical)
-nmap <leader>] :cnext<CR>
-nmap <leader>[ :cprev<CR>
 nmap <leader>d :DebugMain<CR>
 nmap <leader>b :DebugAndBreak<CR>
 nmap <leader>; :Step<CR>

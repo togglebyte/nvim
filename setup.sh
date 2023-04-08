@@ -15,7 +15,9 @@ PACKAGES=(
     "tpope/vim-fugitive"
     "neovim/nvim-lspconfig"
     "preservim/tagbar"
-    "godlygeek/tabular"
+    "udalov/kotlin-vim"
+    # "mfussenegger/nvim-dap"
+    # "rcarriga/nvim-dap-ui"
 )
 
 # -----------------------------------------------------------------------------

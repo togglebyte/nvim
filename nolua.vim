@@ -155,3 +155,5 @@ nmap <leader>co :copen<CR>
 nmap <leader>cc :cclose<CR>
 nmap <leader>] :cnext<CR>
 nmap <leader>[ :cprev<CR>
+
+command! Fixit execute "lua vim.lsp.buf.code_action()"

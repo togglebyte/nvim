@@ -12,12 +12,17 @@ nmap <Leader>x :Cargo run<CR>
 nmap <S-k> :lua vim.lsp.buf.hover()<CR>
 nmap <silent> <Leader>f :RustFmt<CR>
 nmap gv <Plug>(rust-def-vertical)
+
 nmap <leader>d :DebugMain<CR>
 nmap <leader>b :DebugAndBreak<CR>
-nmap <leader>; :Step<CR>
+nmap ; :Over<CR>
+
 nmap <leader>rt :RustTest<CR>
 nmap <leader>tt :DebugTest<CR>
-nmap ; :Over<CR>
+
+" nmap <leader>d :DapToggleBreakpoint<CR>:DapContinue<CR><CR>
+" nmap <leader>b :DapToggleBreakpoint<CR>
+" nmap ; :DapStepOver<CR>
 
 " -----------------------------------------------------------------------------
 "     - Abbreviations -
@@ -63,4 +68,3 @@ let g:rustfmt_command = "rustfmt +nightly"
 " -----------------------------------------------------------------------------
 command! References execute "lua vim.lsp.buf.references()"
 command! Rename execute "lua vim.lsp.buf.rename()"
-command! Fixit execute "lua vim.lsp.buf.code_action()"

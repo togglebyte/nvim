@@ -1,6 +1,4 @@
 local map = vim.api.nvim_set_keymap
-local dap = require("dap")
-local dapui = require("dapui")
 
 vim.cmd(':so $HOME/.config/nvim/nolua.vim')
 
@@ -10,6 +8,7 @@ vim.cmd(':so $HOME/.config/nvim/nolua.vim')
 local nvim_lsp = require'lspconfig'
 local on_attach = function(client)
     map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', {})
+    client.server_capabilities.semanticTokensProvider = nil
 end
 
 nvim_lsp.rust_analyzer.setup({

@@ -16,8 +16,6 @@ PACKAGES=(
     "neovim/nvim-lspconfig"
     "preservim/tagbar"
     "udalov/kotlin-vim"
-    # "mfussenegger/nvim-dap"
-    # "rcarriga/nvim-dap-ui"
 )
 
 # -----------------------------------------------------------------------------

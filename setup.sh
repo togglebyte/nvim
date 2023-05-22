@@ -27,13 +27,6 @@ then
     # and clone all the plugins into it
     # also symlink everything to ~/.vim and ~/.vimrc
     mkdir -p pack/dev/start
-    mkdir -p ~/.vim
-    ln -sf `pwd`/nolua.vim $HOME/.vimrc
-    ln -sf `pwd`/after $HOME/.vim/
-    ln -sf `pwd`/pack $HOME/.vim/
-    ln -sf `pwd`/colors $HOME/.vim/
-    ln -sf `pwd`/spell $HOME/.vim/
-    ln -sf `pwd`/UltiSnips $HOME/.vim/
 
     cd pack/dev/start
     for package in "${PACKAGES[@]}"

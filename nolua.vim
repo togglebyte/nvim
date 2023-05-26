@@ -109,10 +109,6 @@ let g:TermDebugging = 0
 au User TermdebugStartPre let g:TermDebugging = 1
 au User TermdebugStopPost let g:TermDebugging = 0
 
-" -----------------------------------------------------------------------------
-"     - Explore -
-" -----------------------------------------------------------------------------
-" nmap <silent><C-n> :15Lexplore!<cr>
 let g:netrw_liststyle = 3
 
 

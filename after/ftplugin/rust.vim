@@ -20,10 +20,6 @@ nmap ; :Over<CR>
 nmap <leader>rt :RustTest<CR>
 nmap <leader>tt :DebugTest<CR>
 
-" nmap <leader>d :DapToggleBreakpoint<CR>:DapContinue<CR><CR>
-" nmap <leader>b :DapToggleBreakpoint<CR>
-" nmap ; :DapStepOver<CR>
-
 " -----------------------------------------------------------------------------
 "     - Abbreviations -
 " -----------------------------------------------------------------------------

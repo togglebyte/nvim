@@ -16,6 +16,7 @@ nmap gv <Plug>(rust-def-vertical)
 nmap <leader>d :DebugMain<CR>
 nmap <leader>b :DebugAndBreak<CR>
 nmap ; :Over<CR>
+nmap <leader>; :Step<CR>
 
 nmap <leader>rt :RustTest<CR>
 nmap <leader>tt :DebugTest<CR>

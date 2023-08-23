@@ -83,6 +83,7 @@ nmap <C-k> :resize +4<CR>
 nmap <C-j> :resize -4<CR>
 nmap <Leader>} ysiw}
 nmap <C-f> :Rg 
+imap jj <Esc>
 
 " Terminal flapping
 tmap <C-w>k <C-\><C-n><C-w>k 
@@ -153,3 +154,5 @@ nmap <leader>] :cnext<CR>
 nmap <leader>[ :cprev<CR>
 
 command! Fixit execute "lua vim.lsp.buf.code_action()"
+
+" experimental

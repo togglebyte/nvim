@@ -64,8 +64,6 @@ set nosmd
 set hidden
 set nomodeline
 
-let g:netrw_banner=0
-
 " -----------------------------------------------------------------------------
 "     - I love my blocky cursor! -
 " -----------------------------------------------------------------------------
@@ -110,7 +108,12 @@ let g:TermDebugging = 0
 au User TermdebugStartPre let g:TermDebugging = 1
 au User TermdebugStopPost let g:TermDebugging = 0
 
+
+" -----------------------------------------------------------------------------
+"   - Netrw -
+" -----------------------------------------------------------------------------
 let g:netrw_liststyle = 3
+let g:netrw_banner=0
 
 
 " -----------------------------------------------------------------------------

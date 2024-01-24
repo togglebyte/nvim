@@ -5,4 +5,3 @@ set syntax=on
 set foldmethod=expr
 
 let g:vimwiki_folding='list'
-

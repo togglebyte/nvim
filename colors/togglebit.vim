@@ -1,3 +1,4 @@
+source $VIMRUNTIME/colors/vim.lua " Nvim: revert to Vim default color scheme
 set background=dark 
 
 highlight clear SignColumn

@@ -117,3 +117,10 @@ endsnippet
 snippet pl "eprinln"
 eprintln!("$1");
 endsnippet
+
+snippet comp "component"
+impl Component for $1 {
+	type State = ();
+	type Message = ();
+}
+endsnippet

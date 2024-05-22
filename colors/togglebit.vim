@@ -1,4 +1,5 @@
 source $VIMRUNTIME/colors/vim.lua " Nvim: revert to Vim default color scheme
+
 set background=dark 
 
 highlight clear SignColumn
@@ -43,4 +44,3 @@ highlight Pmenu        ctermbg=233 ctermfg=252
 highlight fzf1         ctermfg=161 ctermbg=0
 highlight fzf2         ctermfg=151 ctermbg=0
 highlight fzf3         ctermfg=252 ctermbg=0
-

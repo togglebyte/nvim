@@ -1,3 +1,23 @@
+snippet anabase
+use anathema::prelude::*;
+use anathema::component::*;
+
+fn main() {
+    let mut doc = Document::new("@index");
+
+    let mut backend = TuiBackend::builder()
+        .enable_alt_screen()
+        .enable_raw_mode()
+        .hide_cursor()
+        .finish()
+        .unwrap();
+
+    let mut runtime = Runtime::builder(doc, backend);
+	runtime.register_component("index", "index.aml", (), ());
+    runtime.finish().unwrap().run();
+}
+endsnippet
+
 snippet cmt
 // -----------------------------------------------------------------------------
 //   - $1-

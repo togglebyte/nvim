@@ -1,0 +1,2 @@
+set textwidth=60
+

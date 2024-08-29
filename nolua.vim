@@ -146,6 +146,7 @@ set completeopt = ""
 "     - Glsl -
 " -----------------------------------------------------------------------------
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.vert,*.frag set ft=glsl
+autocmd! BufNewFile,BufRead *.script, set ft=script
 
 " -----------------------------------------------------------------------------
 "     - Quickfix list -

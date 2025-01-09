@@ -69,6 +69,17 @@ impl From<$1> for $0 {
 }
 endsnippet
 
+snippet deref "deref trait impl"
+impl Deref for $1 {
+	type Target = $2;
+	fn deref(&self) -> &Self::Target {
+		$3
+	}
+}
+endsnippet
+
+
+
 snippet default "default macro"
 impl Default for ${0:${VISUAL}} {
 	fn default() -> Self {

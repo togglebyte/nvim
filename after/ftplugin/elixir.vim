@@ -1,6 +1,6 @@
 " -----------------------------------------------------------------------------
 "     - Key maps -
 " -----------------------------------------------------------------------------
-nmap <Leader>x :!clear;elixir %<cr>
-nmap <C-b> :!clear;elixir %<cr>
+nmap <Leader>x :split term://elixir %<cr>
+nmap <C-b> :split term://elixir %<cr>
 abbr pp IO.puts()<Left>

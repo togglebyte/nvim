@@ -11,6 +11,10 @@ local on_attach = function(client)
     client.server_capabilities.semanticTokensProvider = nil
 end
 
+nvim_lsp.zls.setup({
+    on_attach = on_attach,
+})
+
 nvim_lsp.rust_analyzer.setup({
     on_attach = on_attach,
 

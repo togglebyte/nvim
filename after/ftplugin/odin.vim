@@ -1,12 +1,11 @@
-set makeprg=zig\ build
-let g:zig_fmt_autosave = 0
+set makeprg=odin\ build\ .
 
 " -----------------------------------------------------------------------------
 "     - Key mappings -
 " -----------------------------------------------------------------------------
-nmap <Leader>x :split term://zig build run<CR>
-nmap <C-b> :split term://zig build<CR>
-nmap <Leader>f :!clear;zig fmt %<CR>
+nmap <Leader>x :split term://odin run .<CR>
+nmap <C-b> :split term://odin build .<CR>
+nmap <Leader>f :!clear;odinfmt -w .<CR>
 
 " -----------------------------------------------------------------------------
 "     - Abbreviations -

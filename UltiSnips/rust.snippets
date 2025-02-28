@@ -1,6 +1,6 @@
 snippet anabase
-use anathema::prelude::*;
 use anathema::component::*;
+use anathema::prelude::*;
 
 fn main() {
     let mut doc = Document::new("@index");
@@ -11,10 +11,13 @@ fn main() {
         .hide_cursor()
         .finish()
         .unwrap();
+	backend.finalize();
 
-    let mut runtime = Runtime::builder(doc, backend);
-	runtime.register_component("index", "index.aml", (), ());
-    runtime.finish().unwrap().run();
+    let mut builder = Runtime::builder(doc, &backend);
+    let id = builder.from_default::<()>("index", "templates/index.aml").unwrap();
+    builder
+        .finish(|mut runtime| runtime.run(&mut backend))
+        .unwrap();
 }
 endsnippet
 

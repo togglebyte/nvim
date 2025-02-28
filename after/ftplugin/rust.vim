@@ -26,7 +26,7 @@ nmap <leader>tt :DebugTest<CR>
 ia cmt cmt<Leader>t<Left>
 ia dd #[derive(Debug)]
 
-let g:rustfmt_command = "rustfmt +nightly"
+let g:rustfmt_command = "rustfmt +nightly --color=never"
 
 " -----------------------------------------------------------------------------
 "     - Find references to ident -

@@ -14,7 +14,7 @@ fn main() {
 	backend.finalize();
 
     let mut builder = Runtime::builder(doc, &backend);
-    let id = builder.from_default::<()>("index", "templates/index.aml").unwrap();
+    builder.from_default::<()>("index", "templates/index.aml").unwrap();
     builder
         .finish(|mut runtime| runtime.run(&mut backend))
         .unwrap();

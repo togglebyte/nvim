@@ -59,7 +59,7 @@ set nohlsearch
 set ttimeoutlen=10
 set mouse=
 set noswapfile
-set colorcolumn=80
+set colorcolumn=
 set nosmd
 set hidden
 set nomodeline
@@ -102,7 +102,7 @@ set grepprg=rg\ --vimgrep
 " -----------------------------------------------------------------------------
 "     - Debugging -
 " -----------------------------------------------------------------------------
-packadd termdebug
+" packadd termdebug
 let g:termdebug_wide = 1
 let g:TermDebugging = 0
 au User TermdebugStartPre let g:TermDebugging = 1

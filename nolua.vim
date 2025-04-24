@@ -63,6 +63,7 @@ set colorcolumn=
 set nosmd
 set hidden
 set nomodeline
+set shada=
 
 " -----------------------------------------------------------------------------
 "     - I love my blocky cursor! -
@@ -102,7 +103,7 @@ set grepprg=rg\ --vimgrep
 " -----------------------------------------------------------------------------
 "     - Debugging -
 " -----------------------------------------------------------------------------
-" packadd termdebug
+packadd! termdebug
 let g:termdebug_wide = 1
 let g:TermDebugging = 0
 au User TermdebugStartPre let g:TermDebugging = 1

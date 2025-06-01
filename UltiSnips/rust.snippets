@@ -3,7 +3,7 @@ use anathema::component::*;
 use anathema::prelude::*;
 
 fn main() {
-    let mut doc = Document::new("@index");
+    let doc = Document::new("@index");
 
     let mut backend = TuiBackend::builder()
         .enable_alt_screen()

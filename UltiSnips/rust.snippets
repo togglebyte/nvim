@@ -14,10 +14,13 @@ fn main() {
 	backend.finalize();
 
     let mut builder = Runtime::builder(doc, &backend);
-    builder.from_default::<()>("index", "templates/index.aml").unwrap();
-    builder
-        .finish(|mut runtime| runtime.run(&mut backend))
-        .unwrap();
+    builder.default::<()>("index", "templates/index.aml").unwrap();
+	let res = builder
+        .finish(|mut runtime| runtime.run(&mut backend));
+
+	if let Err(e) = res {
+		eprintln!("{e}");
+	}
 }
 endsnippet
 

@@ -85,6 +85,13 @@ impl Deref for $1 {
 endsnippet
 
 
+snippet display "impl Display"
+impl std::fmt::Display for ${0:${VISUAL}} {
+	fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+	}
+}
+endsnippet
+
 
 snippet default "default macro"
 impl Default for ${0:${VISUAL}} {
@@ -94,6 +101,17 @@ impl Default for ${0:${VISUAL}} {
 	}
 }
 endsnippet
+
+
+snippet from "from impl"
+impl From<$0> for ${1} {
+	fn from(value: $0) -> Self {
+		Self {
+		}
+	}
+}
+endsnippet
+
 
 
 snippet main "main function"

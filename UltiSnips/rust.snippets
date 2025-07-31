@@ -18,8 +18,9 @@ fn main() {
 	let res = builder
         .finish(&mut backend, |runtime, backend| runtime.run(backend));
 
-	if let Err(e) = res {
-		eprintln!("{e}");
+	match res {
+		Ok(()) | Err(anathema::runtime::Error::Stop) => {}
+		Err(e) => eprintln!("{e}"),
 	}
 }
 endsnippet
@@ -68,7 +69,7 @@ impl Iterator for $1 {
 }
 endsnippet
 
-snippet impfrom "implement From for..."
+snippet from "implement From for..."
 impl From<$1> for $0 {
 	fn from(e: $1) -> Self {
 	}
@@ -80,6 +81,14 @@ impl Deref for $1 {
 	type Target = $2;
 	fn deref(&self) -> &Self::Target {
 		$3
+	}
+}
+endsnippet
+
+snippet derefmut "derefmut trait impl"
+impl DerefMut for $1 {
+	fn deref_mut(&mut self) -> &mut Self::Target {
+		$2
 	}
 }
 endsnippet
@@ -101,17 +110,6 @@ impl Default for ${0:${VISUAL}} {
 	}
 }
 endsnippet
-
-
-snippet from "from impl"
-impl From<$0> for ${1} {
-	fn from(value: $0) -> Self {
-		Self {
-		}
-	}
-}
-endsnippet
-
 
 
 snippet main "main function"

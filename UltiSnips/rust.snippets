@@ -1,3 +1,10 @@
+snippet drop 
+impl Drop for $1 {
+	fn drop(&mut self) {
+	}
+}
+endsnippet
+
 snippet anabase
 use anathema::component::*;
 use anathema::prelude::*;
@@ -14,7 +21,7 @@ fn main() {
 	backend.finalize();
 
     let mut builder = Runtime::builder(doc, &backend);
-    builder.default::<()>("index", "templates/index.aml").unwrap();
+    builder.template("index", "templates/index.aml").unwrap();
 	let res = builder
         .finish(&mut backend, |runtime, backend| runtime.run(backend));
 
@@ -89,6 +96,14 @@ snippet derefmut "derefmut trait impl"
 impl DerefMut for $1 {
 	fn deref_mut(&mut self) -> &mut Self::Target {
 		$2
+	}
+}
+endsnippet
+
+
+snippet debug "impl Debug"
+impl std::fmt::Debug for ${0:${VISUAL}} {
+	fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
 	}
 }
 endsnippet

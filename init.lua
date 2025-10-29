@@ -5,18 +5,13 @@ vim.cmd(':so $HOME/.config/nvim/nolua.vim')
 -----------------------------------------------------------------------------
 --    LSP
 -----------------------------------------------------------------------------
-local nvim_lsp = require('lspconfig')
-
 local on_attach = function(client)
     map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', {})
     client.server_capabilities.semanticTokensProvider = nil
 end
 
-nvim_lsp.zls.setup({
-    on_attach = on_attach,
-})
-
-nvim_lsp.rust_analyzer.setup({
+vim.lsp.enable('rust_analyzer')
+vim.lsp.config('rust_analyzer', {
     on_attach = on_attach;
 
     settings = {
@@ -26,6 +21,7 @@ nvim_lsp.rust_analyzer.setup({
             }
         }
     };
+
 })
 
 vim.diagnostic.config({ 

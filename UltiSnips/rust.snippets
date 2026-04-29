@@ -117,11 +117,21 @@ impl std::fmt::Display for ${0:${VISUAL}} {
 endsnippet
 
 
-snippet default "default macro"
+snippet default "default impl"
 impl Default for ${0:${VISUAL}} {
 	fn default() -> Self {
 		Self {
 		}
+	}
+}
+endsnippet
+
+
+snippet index "impl index"
+impl Index<> for ${0:${VISUAL}} {
+	type Target = ;
+
+	fn index(&self) -> Self {
 	}
 }
 endsnippet
@@ -160,25 +170,6 @@ snippet bench
 fn $1(b: &mut Bencher) {
     b.iter(|| {
     });
-}
-endsnippet
-
-snippet address "address boilerplate"
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
-pub enum Address {
-	$0
-}
-
-impl ToAddress for Address {
-	fn from_bytes(bytes: &[u8]) -> Option<Address> {
-		match bytes {
-			_ => None
-		}
-	}
-
-	fn to_string(&self) -> String {
-		format!("{:?}", self)
-	}
 }
 endsnippet
 

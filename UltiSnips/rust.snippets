@@ -128,10 +128,10 @@ endsnippet
 
 
 snippet index "impl index"
-impl Index<> for ${0:${VISUAL}} {
+impl Index<${1}> for ${0:${VISUAL}} {
 	type Target = ;
 
-	fn index(&self) -> Self {
+	fn index(&self, index: ${1}) -> Self {
 	}
 }
 endsnippet

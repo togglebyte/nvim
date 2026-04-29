@@ -131,7 +131,8 @@ snippet index "impl index"
 impl Index<${1}> for ${0:${VISUAL}} {
 	type Target = ;
 
-	fn index(&self, index: ${1}) -> Self {
+	fn index(&self, index: ${1}) -> &Self::Target {
+		&self.inner[index]
 	}
 }
 endsnippet

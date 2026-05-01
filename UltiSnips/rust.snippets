@@ -85,7 +85,7 @@ endsnippet
 
 snippet deref "deref trait impl"
 impl Deref for $1 {
-	type Output = $2;
+	type Target = $2;
 	fn deref(&self) -> &Self::Target {
 		$3
 	}

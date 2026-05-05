@@ -137,6 +137,14 @@ impl Index<$1> for ${0:${VISUAL}} {
 }
 endsnippet
 
+snippet indexmut "impl index mut"
+impl IndexMut<$1> for ${0:${VISUAL}} {
+	fn index_mut(&mut self, index: $1) -> &mut Self::Output {
+		&mut self.inner[index]
+	}
+}
+endsnippet
+
 
 snippet main "main function"
 fn main() {
